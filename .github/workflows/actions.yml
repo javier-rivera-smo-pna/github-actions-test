@@ -3,7 +3,10 @@ name: Actions Workflow
 # on: [push, pull_request]
 # specify pull_request activity types
 on:
-  push:
+  schedule:
+    - cron: "0/5 * * * *"
+    - cron: "0/6 * * * *"
+  # push
   pull_request:
     types:
       - opened
